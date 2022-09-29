@@ -1,2 +1,1 @@
--------------27-9-------------
-To Do: 
+How to start Valhalla:
