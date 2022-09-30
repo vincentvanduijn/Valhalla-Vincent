@@ -20,6 +20,13 @@
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<springdoc-openapi-security.version>1.6.11</springdoc-openapi-security.version>
+		<mysql.version>8.0.30</mysql.version>
+		<org.jupiter.version>5.9.0</org.jupiter.version>
+		<org.apache.logging.log4j.version>2.17.2</org.apache.logging.log4j.version>
+		<org.sprindoc.version>1.6.11</org.sprindoc.version>
+		<org.assertj.version>3.23.1</org.assertj.version>
+		<org.wso2.orbit.org.mapstruct.version>1.4.1.wso2v1</org.wso2.orbit.org.mapstruct.version>
+		<org.mapstruct.version>1.5.2.Final</org.mapstruct.version>
 	</properties>
 
 	<dependencies>
@@ -48,7 +55,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.30</version>
+			<version>${mysql.version}</version>
 		</dependency>
 
 		<dependency>
@@ -67,14 +74,14 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
-			<version>5.9.0</version>
+			<version>${org.jupiter.version}</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
-			<version>2.17.2</version>
+			<version>${org.apache.logging.log4j.version}</version>
 		</dependency>
 
 		<dependency>
@@ -105,7 +112,7 @@
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>1.6.11</version>
+			<version>${org.sprindoc.version}</version>
 		</dependency>
 
 		<dependency>
@@ -117,9 +124,22 @@
 		<dependency>
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-core</artifactId>
-			<version>3.23.1</version>
+			<version>${org.assertj.version}</version>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.wso2.orbit.org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>${org.wso2.orbit.org.mapstruct.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<version>${org.mapstruct.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
