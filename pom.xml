@@ -27,6 +27,9 @@
 		<org.assertj.version>3.23.1</org.assertj.version>
 		<org.wso2.orbit.org.mapstruct.version>1.4.1.wso2v1</org.wso2.orbit.org.mapstruct.version>
 		<org.mapstruct.version>1.5.2.Final</org.mapstruct.version>
+		<org.keycloak.version>19.0.2</org.keycloak.version>
+		<org.keycloak.bom.version>19.0.2</org.keycloak.bom.version>
+		<io.github.cdimascio.version>2.2.4</io.github.cdimascio.version>
 	</properties>
 
 	<dependencies>
@@ -138,6 +141,26 @@
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct-processor</artifactId>
 			<version>${org.mapstruct.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.keycloak</groupId>
+			<artifactId>keycloak-spring-boot-starter</artifactId>
+			<version>${org.keycloak.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.keycloak.bom</groupId>
+			<artifactId>keycloak-adapter-bom</artifactId>
+			<version>${org.keycloak.bom.version}</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.cdimascio</groupId>
+			<artifactId>dotenv-java</artifactId>
+			<version>${io.github.cdimascio.version}</version>
 		</dependency>
 
 	</dependencies>
