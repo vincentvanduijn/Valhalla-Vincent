@@ -4,6 +4,17 @@ server:
     include-stacktrace: never
 
 spring:
+  application:
+    name: eureka-server
+  server:
+    port: 8761
+  eureka:
+    client:
+      registerWithEureka: false
+      fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+
   main:
     allow-bean-definition-overriding: true
   datasource:
@@ -13,6 +24,22 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+
+
+name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: test-service
+          uri: lb://test-service
+          predicates:
+            - Path=/test/**
+port: 8080
+  eureka:
+    client:
+      registerWithEureka: true
+      serviceUrl:
+        defaultZone: ${EUREKA_SERVER_ADDRESS}
 
 
 logging:

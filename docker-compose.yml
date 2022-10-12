@@ -39,6 +39,29 @@ services:
     depends_on:
       - mysql
 
+  eureka-server:
+    image: barathece91/eureka-server-k8s
+    hostname: eureka-server
+    ports:
+      - "8761:8761"
+    environment:
+      eureka.instance.hostname: valhalla-server
+      eureka.client.serviceUrl.defaultZone: http://eureka-server:8761/eureka/
+    command: mvn clean spring-boot:run
+
+  spring-cloud-gateway-service:
+    build: ./spring-cloud-gateway
+    image: barathece91/eureka-server-k8s
+    ports:
+        - "8080:8080"
+    depends_on:
+      - eureka-server
+    environment:
+        server.port: 8080
+        eureka.client.serviceUrl.defaultZone: http://host.docker.internal:8761/eureka
+    command: mvn clean spring-boot:run
+
+
 
 
 

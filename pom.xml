@@ -30,6 +30,7 @@
 		<org.keycloak.version>19.0.2</org.keycloak.version>
 		<org.keycloak.bom.version>19.0.2</org.keycloak.bom.version>
 		<io.github.cdimascio.version>2.2.4</io.github.cdimascio.version>
+		<org.springframework.cloud.version>3.1.4</org.springframework.cloud.version>
 	</properties>
 
 	<dependencies>
@@ -161,6 +162,18 @@
 			<groupId>io.github.cdimascio</groupId>
 			<artifactId>dotenv-java</artifactId>
 			<version>${io.github.cdimascio.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<version>${org.springframework.cloud.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
+			<version>${org.springframework.cloud.version}</version>
 		</dependency>
 
 	</dependencies>
