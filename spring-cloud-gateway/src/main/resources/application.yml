@@ -1,11 +1,5 @@
 name: spring-cloud-gateway
   cloud:
-#    gateway:
-#      routes:
-#        - id: test-service
-#          uri: lb://test-service
-#          predicates:
-#            - Path=/test/**
 port: 8080
   eureka:
     instance:
