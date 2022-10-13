@@ -1,0 +1,15 @@
+name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: test-service
+          uri: lb://test-service
+          predicates:
+            - Path=/test/**
+port: 8080
+  eureka:
+    client:
+      registerWithEureka: true
+      serviceUrl:
+        defaultZone: ${EUREKA_SERVER_ADDRESS}
+
