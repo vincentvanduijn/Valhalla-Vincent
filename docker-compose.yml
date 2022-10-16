@@ -41,17 +41,15 @@ services:
 
   eureka-server:
     image: barathece91/eureka-server-k8s
-    hostname: eureka-server
     ports:
       - "8761:8761"
     environment:
-      eureka.instance.hostname: eureka-server
       eureka.client.serviceUrl.defaultZone: http://eureka-server:8761/eureka/
+      preferIpAddress: true
     command: mvn clean spring-boot:run
 
   spring-cloud-gateway-service:
-    build: ./spring-cloud-gateway
-    image: barathece91/eureka-server-k8s
+    image: devplant/spring-cloud-gateway:latest
     ports:
         - "8080:8080"
     depends_on:
@@ -60,7 +58,6 @@ services:
       - mysql
     environment:
         server.port: 8080
-        eureka.client.serviceUrl.defaultZone: http://eureka-server:8761/eureka/
     command: mvn clean spring-boot:run
 
 
