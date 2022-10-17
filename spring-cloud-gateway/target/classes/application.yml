@@ -1,0 +1,15 @@
+name: spring-cloud-gateway
+  cloud:
+port: 8080
+  eureka:
+    instance:
+      preferIpAddress: true
+    client:
+      registerWithEureka: true
+      serviceUrl:
+        defaultZone: ${EUREKA_SERVER_ADDRESS}
+        eureka:
+          client:
+            service-url:
+              defaultZone=http://localhost:8761/eureka/
+

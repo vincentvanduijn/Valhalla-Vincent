@@ -1,15 +1,13 @@
 server:
-  port: 8080
   error:
     include-stacktrace: never
 
 spring:
   main:
-    allow-bean-definition-overriding: true
   datasource:
     url: jdbc:mysql://localhost:3306/keycloak
-    username: root
-    password: root
+    USERNAME: "${USERNAME}"
+    PASSWORD: "${PASSWORD}"
   jpa:
     hibernate:
       ddl-auto: update

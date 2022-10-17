@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>Valhalla</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>com.valhalla-vincent</groupId>
+	<artifactId>keycloak</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>valhalla</name>
 	<description>Valhalla project</description>

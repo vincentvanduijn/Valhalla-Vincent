@@ -13,7 +13,7 @@ services:
       - "3306:3306"
     container_name: mysql_Valhalla
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
       MYSQL_DATABASE: keycloak
       MYSQL_USER: "${MYSQL_USER}"
       MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
@@ -35,7 +35,7 @@ services:
       KC_HTTP_ENABLED: "true"
     command: start --optimized
     ports:
-      - "127.0.0.1:8180:8080"
+      - "8180:8080"
     depends_on:
       - mysql
 
