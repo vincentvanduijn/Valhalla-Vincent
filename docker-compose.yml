@@ -43,8 +43,6 @@ services:
     image: barathece91/eureka-server-k8s
     ports:
       - "8761:8761"
-    environment:
-      preferIpAddress: true
     command: mvn clean spring-boot:run
 
   spring-cloud-gateway-service:

@@ -155,7 +155,6 @@
 			<artifactId>keycloak-adapter-bom</artifactId>
 			<version>${org.keycloak.bom.version}</version>
 			<type>pom</type>
-			<scope>import</scope>
 		</dependency>
 
 		<dependency>

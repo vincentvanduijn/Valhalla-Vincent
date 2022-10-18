@@ -1,3 +1,7 @@
+spring:
+  application:
+    name: keycloak
+
 server:
   error:
     include-stacktrace: never
@@ -34,8 +38,6 @@ spring-doc:
     operations-sorter: method
 
 eureka:
-  instance:
-    preferIpAddress: true
   client:
     registerWithEureka: true
       service-url:
